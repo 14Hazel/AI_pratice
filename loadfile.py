@@ -1,17 +1,9 @@
 from langchain.document_loaders import UnstructuredHTMLLoader
-import nltk
-import ssl
+import os, os.path
 
 
 
 # avoid ssl error
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    pass
-else:
-    ssl._create_default_https_context = _create_unverified_https_context
-nltk.download('punkt')
 
 
 loader = UnstructuredHTMLLoader("test/AboutSIFT4G.html")
@@ -27,5 +19,19 @@ print(data)
 """
 
 class Docs:
-    def __init__() -> None:
+    def __init__(self, filepath:str, filetype:str) -> str:
+
+        self.filepath = filepath
+
+        self.filetype = filetype
+
+    def type(self):
+        #按照文件后缀名切割？
         pass
+
+    # def check(self):
+
+    #     if 
+
+
+

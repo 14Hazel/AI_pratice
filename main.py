@@ -1,6 +1,7 @@
 import os, sys
 import click
 import loadfile
+import digest_doc
 
 def main():
     pass
