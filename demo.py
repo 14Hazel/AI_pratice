@@ -13,8 +13,8 @@ from langchain.chains import ConversationalRetrievalChain
 
 
 @click.command(["-h, --help"])
-@click.option('--query', required=True, help="input your question")
-@click.option('--file', required=True, help="Enter knowledge db path")
+@click.option('--query', required=True, help="input your question.")
+@click.option('--file', required=True, help="Enter knowledge db path or db file path.")
 def main(query, file):
 
     loader = doc_loader(file)
